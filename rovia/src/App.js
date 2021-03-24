@@ -11,15 +11,43 @@ import './App.css';
 
 export default function App() {
 
-  const history = useHistory();
+  //const history = useHistory();
   return (
-    <Route path="/login" component={LoginPage} />
-
-    <Route
-      path="/rovia/cart"
-      exact
-      component={() => <CartPage />}
-    />
+    <Switch>
+      <Route path="/login" component={LoginPage} />
+      <Route path="/" exact component={() => <HomePage />} />
+      <Route
+        path="/rovia/cart"
+        exact
+        component={() => <CartPage />}
+      />
+      <Route
+        path="/rovia/item/:id"
+        exact
+        component={() => <ProductPage />}
+      />
+      <Route
+        path="/rovia/create"
+        exact
+        component={() => <CreateProduct />}
+      />
+      <Route
+        path="/rovia/wishlist"
+        exact
+        component={() => <WishlistPage />}
+      />
+      <Route
+        path="/rovia/seller/:name"
+        exact
+        component={() => <SellerPage />}
+      />
+      <Route
+        path="/rovia/buyer/history"
+        exact
+        component={() => <PurchaseHistory />}
+      />
+    </Switch>
+    
   );
 }
 
