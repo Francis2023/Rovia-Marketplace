@@ -7,7 +7,8 @@ import { ProductPage } from './components/Product';
 import { CreateProduct } from './components/CreateProduct';
 import { SellerPage } from './components/Seller';
 import { WishlistPage } from './components/Wishlist';
-import './App.css';
+import { PurchaseHistory } from './components/PurchaseHistory';
+
 
 export default function App() {
 
